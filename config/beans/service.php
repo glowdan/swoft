@@ -1,16 +1,11 @@
 <?php
-return [
-    'dispatcherService' => [
-        'class' => \Swoft\Service\DispatcherService::class,
-    ],
-    'serviceRouter'     => [
-        'class' => \Swoft\Router\Service\HandlerMapping::class,
-    ],
-    'servicePacker'     => [
-        'class'   => \Swoft\Service\ServicePacker::class,
-        'type'    => 'json',
-        'packers' => [
 
-        ],
-    ],
+/*
+ * This file is part of Swoft.
+ * (c) Swoft <group@swoft.org>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+return [
 ];

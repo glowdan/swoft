@@ -1,22 +1,24 @@
 <?php
+/**
+ * This file is part of Swoft.
+ *
+ * @link https://swoft.org
+ * @document https://doc.swoft.org
+ * @contact group@swoft.org
+ * @license https://github.com/swoft-cloud/swoft/blob/master/LICENSE
+ */
 
 namespace App\Controllers;
 
-use Swoft\Bean\Annotation\Controller;
-use Swoft\Bean\Annotation\RequestMapping;
-use Swoft\Web\Request;
-use Swoft\Web\Response;
+use Swoft\Http\Server\Bean\Annotation\Controller;
+use Swoft\Http\Server\Bean\Annotation\RequestMapping;
+use Swoft\Http\Message\Server\Request;
+use Swoft\Http\Message\Server\Response;
 
 /**
  * action demo
  *
  * @Controller(prefix="/route")
- *
- * @uses      TestController
- * @version   2017年11月26日
- * @author    stelin <phpcrazy@126.com>
- * @copyright Copyright 2010-2016 swoft software
- * @license   PHP Version 7.x {@link http://www.php.net/license/3_0.txt}
  */
 class RouteController
 {
@@ -32,11 +34,11 @@ class RouteController
      * @RequestMapping(route="user/{uid}/book/{bid}/{bool}/{name}")
      *
      * @param bool                $bool
-     * @param \Swoft\Web\Request  $request
+     * @param Request  $request
      * @param int                 $bid
      * @param string              $name
      * @param int                 $uid
-     * @param \Swoft\Web\Response $response
+     * @param Response $response
      *
      * @return array
      */
@@ -57,7 +59,7 @@ class RouteController
 
     /**
      * @RequestMapping(route="hasAnyArgs/{bid}")
-     * @param \Swoft\Web\Request $request
+     * @param Request $request
      * @param int                $bid
      *
      * @return string
@@ -70,7 +72,7 @@ class RouteController
     /**
      * @RequestMapping(route="hasMoreArgs")
      *
-     * @param \Swoft\Web\Request $request
+     * @param Request $request
      * @param int                $bid
      *
      * @return array
@@ -107,7 +109,7 @@ class RouteController
     }
 
     /**
-     * @param \Swoft\Web\Request $request
+     * @param Request $request
      *
      * @return array
      */
@@ -117,7 +119,7 @@ class RouteController
     }
 
     /**
-     * @param \Swoft\Web\Request $request
+     * @param Request $request
      *
      * @return array
      */
@@ -127,7 +129,7 @@ class RouteController
     }
 
     /**
-     * @param \Swoft\Web\Request $request
+     * @param Request $request
      *
      * @return array
      */
